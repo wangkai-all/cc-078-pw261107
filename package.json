@@ -1,0 +1,26 @@
+{
+  "name": "exam-analytics-dashboard",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test:engine": "node src/engine/engine.test.ts",
+    "test:smoke": "esbuild scripts/smoke.tsx --bundle --format=esm --outfile=/tmp/smoke.mjs --jsx=automatic --log-level=error && node scripts/smoke-run.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "jsdom": "^31.0.1",
+    "playwright": "^1.65.0",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.11"
+  }
+}
